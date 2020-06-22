@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/spam.css') }}",type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>Spam Mail Checker</title>
+</head>
+<body>
+
+    
+    <header class="header">
+        <p>Welecome to Spam Mail Checker</p>
+        <p>Please Enter Your Mail Content Below</p>
+    </header>
+    <div class="container">
+        <form action="/" method="POST">
+            <textarea name="review" cols="70" rows="15" placeholder="Enter Your mail: "></textarea>
+            <br>
+            <button type="submit" class="btn btn-warning btn-lg">Predict</button>
+            <div id="response">
+                {% if  your_pred == 1 %}
+                    <h3>This Mail is a spam <i class="fa fa-frown-o" aria-hidden="true" style="font-size:56px;color:rgb(236, 16, 16); margin: 10px;"> </i></h3>
+                
+                {% elif your_pred  == 2 %}
+                    <h3>This mail is not a Spam<i class="fa fa-smile-o" aria-hidden="true" style="font-size:56px;color:rgb(159, 206, 122); margin: 10px;"></i></h3>
+                {% endif %}
+            </div>
+        </form>
+        
+    </div>
+    
+
+    <footer class="footer">
+        <h4>Made With <i class="fa fa-heart" aria-hidden="true" style="font-size:26px;color:rgb(0, 255, 115)"></i> By Karan Choudhary</h4>
+        <a href="https://www.instagram.com/choudhary_krn/" ><i class="fa fa-instagram" aria-hidden="true" style="font-size:48px;color:rgb(159, 206, 122); margin: 10px;"></i></a>
+        <a href="https://www.linkedin.com/in/karan-choudhary-3b5a90185/"><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(96, 148, 179); margin: 10px;"></i></a>
+        <a href="https://github.com/Karan7887"><i class="fa fa-github" aria-hidden="true" style="font-size:48px;color:rgb(107, 209, 93); margin: 10px;"></i></a>
+    </footer>
+    
+</body>
+</html>
