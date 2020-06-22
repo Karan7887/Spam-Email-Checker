@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect
 
 
 import numpy as np
-import joblib
+from sklearn.externals import joblib
 
 model = joblib.load('model2.pkl')
 
