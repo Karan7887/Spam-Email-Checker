@@ -4,9 +4,9 @@ from flask import Flask,render_template,request,redirect
 import numpy as np
 import joblib
 
-model = joblib.load('model3.pkl')
+model = joblib.load('model4.pkl')
 
-cv = joblib.load('vector3.pkl')
+cv = joblib.load('vector4.pkl')
 
 import nltk
 from nltk.tokenize import RegexpTokenizer
